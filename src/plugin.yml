@@ -1,0 +1,5 @@
+name: PermissionAttributes
+version: 1.0
+author: Hallaquin
+main: dev.hallaquin.PermissionAttributes
+api-version: 1.21.11

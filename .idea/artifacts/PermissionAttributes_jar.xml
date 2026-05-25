@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PermissionAttributes:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PermissionAttributes.jar</output-path>
+    <root id="archive" name="PermissionAttributes.jar">
+      <element id="module-output" name="PermissionAttributes" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>
