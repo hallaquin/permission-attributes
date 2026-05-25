@@ -42,7 +42,7 @@ public class LuckPermsListener {
         for (Attribute attribute : Registry.ATTRIBUTE) {
             AttributeInstance instance = player.getAttribute(attribute);
             if (instance != null) {
-                String attributeKey = attribute.getKey().getKey();
+                String attributeKey = attribute.getKeyOrThrow().getKey();
                 if (attributeKey.equals("movement_speed")) {
                     instance.setBaseValue(0.10000000149011612);
                 } else {
@@ -64,7 +64,7 @@ public class LuckPermsListener {
 
                     Attribute attribute = null;
                     for (Attribute attr : Registry.ATTRIBUTE) {
-                        if (attr.getKey().getKey().equalsIgnoreCase(attributeName)) {
+                        if (attr.getKeyOrThrow().getKey().equalsIgnoreCase(attributeName)) {
                             attribute = attr;
                             break;
                         }
@@ -75,7 +75,7 @@ public class LuckPermsListener {
                         if (instance != null) {
                             instance.setBaseValue(value);
 
-                            if (attribute.getKey().getKey().equals("max_health")) {
+                            if (attribute.getKeyOrThrow().getKey().equals("max_health")) {
                                 player.setHealth(instance.getBaseValue());
                             }
                         }

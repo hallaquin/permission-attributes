@@ -40,7 +40,7 @@ public final class PermissionAttributes extends JavaPlugin {
         int registeredCount = 0;
 
         for (Attribute attribute : Registry.ATTRIBUTE) {
-            String attributeName = attribute.getKey().getKey();
+            String attributeName = attribute.getKeyOrThrow().getKey();
             String permissionNode = "permissionattributes." + attributeName;
 
             if (pm.getPermission(permissionNode) == null) {
